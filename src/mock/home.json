@@ -1,0 +1,214 @@
+{
+  "brand":{
+    "title":"品牌制造商直供",
+    "goods":[
+      {
+      "imgUrl":"http://yanxuan.nosdn.127.net/e57c3fb16c4633c292d8c0e7cb053a6f.png?imageView&thumbnail=355x0&quality=65",
+      "make":"CK制造商",
+      "price":"25"
+      },
+      {
+        "imgUrl":"http://yanxuan.nosdn.127.net/cc056d931b009298769d65b94175d696.png?imageView&thumbnail=355x0&quality=65",
+        "make":"Nine West制造商",
+        "price":"209"
+      },
+      {
+        "imgUrl":"http://yanxuan.nosdn.127.net/5e2f6d68ca4cf25b18d6573eafa2a4d4.png?imageView&thumbnail=355x0&quality=65",
+        "make":"海外制造商",
+        "price":"9.9"
+      },
+      {
+        "imgUrl":"http://yanxuan.nosdn.127.net/7f55f337f98a198ac3d629847171d5d2.png?imageView&thumbnail=355x0&quality=65",
+        "make":"个人制造",
+        "price":"19"
+      }
+    ]
+  },
+  "news":[
+    {
+      "title":"新品首发",
+      "id":"1",
+      "bgdImg":"//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/bitmap-d4f7b37e32.png",
+      "list": [
+        {
+          "feature": "情定七夕 · 红玫瑰",
+          "meaning": "玫瑰诉情，爱意难休",
+          "imgUrl": "http://yanxuan.nosdn.127.net/1c62af3f665ec8a7b9c9723cf1fe3320.png?imageView&quality=65&thumbnail=330x330",
+          "price": "88"
+        },
+        {
+          "feature": "真爱一生",
+          "meaning": "优雅AKOYA珍珠，搭配14K金链条",
+          "imgUrl":"http://yanxuan.nosdn.127.net/5fb2a0296ebbb1d25865fce3276beca4.png?imageView&quality=65&thumbnail=330x330",
+          "price": "1699"
+        },
+        {
+          "feature": "情定七夕 · 红玫瑰",
+          "meaning": "玫瑰诉情，爱意难休",
+          "imgUrl":"http://yanxuan.nosdn.127.net/5fb2a0296ebbb1d25865fce3276beca4.png?imageView&quality=65&thumbnail=330x330",
+          "price": "1699"
+        },
+        {
+          "feature": "情定七夕 · 红玫瑰",
+          "meaning": "玫瑰诉情，爱意难休",
+          "imgUrl": "http://yanxuan.nosdn.127.net/1c62af3f665ec8a7b9c9723cf1fe3320.png?imageView&quality=65&thumbnail=330x330",
+          "price": "88"
+        },
+        {
+          "feature": "真爱一生",
+          "meaning": "优雅AKOYA珍珠，搭配14K金链条",
+          "imgUrl":"http://yanxuan.nosdn.127.net/5fb2a0296ebbb1d25865fce3276beca4.png?imageView&quality=65&thumbnail=330x330",
+          "price": "1699"
+        },
+        {
+          "feature": "情定七夕 · 红玫瑰",
+          "meaning": "玫瑰诉情，爱意难休",
+          "imgUrl":"http://yanxuan.nosdn.127.net/5fb2a0296ebbb1d25865fce3276beca4.png?imageView&quality=65&thumbnail=330x330",
+          "price": "1699"
+        },
+        {
+          "feature": "真爱一生",
+          "meaning": "优雅AKOYA珍珠，搭配14K金链条",
+          "imgUrl":"http://yanxuan.nosdn.127.net/5fb2a0296ebbb1d25865fce3276beca4.png?imageView&quality=65&thumbnail=330x330",
+          "price": "1699"
+        },
+        {
+          "feature": "真爱一生",
+          "meaning": "优雅AKOYA珍珠，搭配14K金链条",
+          "imgUrl":"http://yanxuan.nosdn.127.net/5fb2a0296ebbb1d25865fce3276beca4.png?imageView&quality=65&thumbnail=330x330",
+          "price": "1699"
+        },
+        {
+          "feature": "真爱一生",
+          "meaning": "优雅AKOYA珍珠，搭配14K金链条",
+          "imgUrl":"http://yanxuan.nosdn.127.net/5fb2a0296ebbb1d25865fce3276beca4.png?imageView&quality=65&thumbnail=330x330",
+          "price": "1699"
+        },
+        {
+          "feature": "真爱一生",
+          "meaning": "优雅AKOYA珍珠，搭配14K金链条",
+          "imgUrl":"http://yanxuan.nosdn.127.net/5fb2a0296ebbb1d25865fce3276beca4.png?imageView&quality=65&thumbnail=330x330",
+          "price": "1699"
+        }
+      ]
+    },
+    {
+      "title":"人气推荐 · 好物精选",
+      "id":"2",
+      "bgdImg":"//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/bitmap2-d626e0b52a.png",
+      "list": [
+        {
+          "feature": "24寸 纯PC“铝框”（非全铝）拉杆箱",
+          "meaning": "71升容量升级，灵活出行",
+          "imgUrl": "http://yanxuan.nosdn.127.net/021188f19de55d4e146dee96b9a0e104.png?imageView&quality=65&thumbnail=330x330",
+          "price": "388"
+        },
+        {
+          "feature": "多功能私享按摩椅",
+          "meaning": "选款师力荐 专属私人按摩师",
+          "imgUrl":"http://yanxuan.nosdn.127.net/8319d7be7b6c4f1654535aa9c80931b5.png?imageView&quality=65&thumbnail=330x330",
+          "price": "1999"
+        },
+        {
+          "feature": "24寸 纯PC“铝框”（非全铝）拉杆箱",
+          "meaning": "71升容量升级，灵活出行",
+          "imgUrl": "http://yanxuan.nosdn.127.net/021188f19de55d4e146dee96b9a0e104.png?imageView&quality=65&thumbnail=330x330",
+          "price": "388"
+        },
+        {
+          "feature": "多功能私享按摩椅",
+          "meaning": "选款师力荐 专属私人按摩师",
+          "imgUrl":"http://yanxuan.nosdn.127.net/8319d7be7b6c4f1654535aa9c80931b5.png?imageView&quality=65&thumbnail=330x330",
+          "price": "1999"
+        },
+        {
+          "feature": "24寸 纯PC“铝框”（非全铝）拉杆箱",
+          "meaning": "71升容量升级，灵活出行",
+          "imgUrl": "http://yanxuan.nosdn.127.net/021188f19de55d4e146dee96b9a0e104.png?imageView&quality=65&thumbnail=330x330",
+          "price": "388"
+        },
+        {
+          "feature": "多功能私享按摩椅",
+          "meaning": "选款师力荐 专属私人按摩师",
+          "imgUrl":"http://yanxuan.nosdn.127.net/8319d7be7b6c4f1654535aa9c80931b5.png?imageView&quality=65&thumbnail=330x330",
+          "price": "1999"
+        }
+      ]
+    }
+
+  ],
+  "human":[
+    {
+      "title":"居家好物",
+      "goods":[
+        {
+          "imgUrl":"http://yanxuan.nosdn.127.net/05ecfb1f8beff52a1aa4e48b21dda530.png?imageView&quality=65&thumbnail=330x330",
+          "describe":"硬度偏好者优选",
+          "usefor":"冬夏两用 护脊椰棕弹簧床垫",
+          "price":"2099"
+        },
+        {
+          "imgUrl":"http://yanxuan.nosdn.127.net/88dc5d80c6f84102f003ecd69c86e1cf.png?imageView&quality=65&thumbnail=330x330",
+          "describe":"天然肌理感，厚实静音",
+          "usefor":"160*230羊毛手工地毯",
+          "price":"969"
+        },
+        {
+          "imgUrl":"http://yanxuan.nosdn.127.net/8b9328496990357033d4259fda250679.png?imageView&quality=65&thumbnail=330x330",
+          "describe":"手工枪刺图纹，随性百搭新审美",
+          "usefor":"160*230羊毛圈绒枪刺地毯",
+          "price":"969"
+        },
+        {
+          "imgUrl":"http://yanxuan.nosdn.127.net/05ecfb1f8beff52a1aa4e48b21dda530.png?imageView&quality=65&thumbnail=330x330",
+          "describe":"硬度偏好者优选",
+          "usefor":"冬夏两用 护脊椰棕弹簧床垫",
+          "price":"2099"
+        },
+        {
+          "imgUrl":"http://yanxuan.nosdn.127.net/88dc5d80c6f84102f003ecd69c86e1cf.png?imageView&quality=65&thumbnail=330x330",
+          "describe":"天然肌理感，厚实静音",
+          "usefor":"160*230羊毛手工地毯",
+          "price":"969"
+        }
+      ]
+    },
+    {
+      "title":"鞋包配饰好物",
+      "goods":[
+        {
+          "imgUrl":"http://yanxuan.nosdn.127.net/2573064c417e476236126ce340625806.png?imageView&quality=65&thumbnail=330x330",
+          "describe":"复古也时尚 经典马鞍包",
+          "usefor":"冬夏两用 护脊椰棕弹簧床垫",
+          "price":"2099"
+        },
+        {
+          "imgUrl":"http://yanxuan.nosdn.127.net/13bce11c714d8b89fb09ad7ca529e616.png?imageView&quality=65&thumbnail=330x330",
+          "describe":"把轻、柔、韧发挥到超乎你想象",
+          "usefor":"160*230羊毛手工地毯",
+          "price":"1969"
+        },
+        {
+          "imgUrl":"http://yanxuan.nosdn.127.net/42c01a9f36d0c04489464880efe7eb8f.png?imageView&quality=65&thumbnail=330x330",
+          "describe":"四叶草设计，百搭经典",
+          "usefor":"经典四叶草项链",
+          "price":"587"
+        },
+        {
+          "imgUrl":"http://yanxuan.nosdn.127.net/2573064c417e476236126ce340625806.png?imageView&quality=65&thumbnail=330x330",
+          "describe":"复古也时尚 经典马鞍包",
+          "usefor":"冬夏两用 护脊椰棕弹簧床垫",
+          "price":"2099"
+        },
+        {
+          "imgUrl":"http://yanxuan.nosdn.127.net/13bce11c714d8b89fb09ad7ca529e616.png?imageView&quality=65&thumbnail=330x330",
+          "describe":"把轻、柔、韧发挥到超乎你想象",
+          "usefor":"160*230羊毛手工地毯",
+          "price":"1969"
+        }
+      ]
+    }
+  ]
+
+
+}

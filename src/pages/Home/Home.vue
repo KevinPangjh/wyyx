@@ -8,22 +8,7 @@
       <!--商品导航-->
       <div class="scroll">
         <ul class="list" ref="ulWidth">
-          <li class="list_item">推荐</li>
-          <li class="list_item">鞋包</li>
-          <li class="list_item">居家</li>
-          <li class="list_item">服装</li>
-          <li class="list_item">电器</li>
-          <li class="list_item">推荐</li>
-          <li class="list_item">鞋包</li>
-          <li class="list_item">居家</li>
-          <li class="list_item">推荐</li>
-          <li class="list_item">鞋包</li>
-          <li class="list_item">居家</li>
-          <li class="list_item">服装</li>
-          <li class="list_item">电器</li>
-          <li class="list_item">推荐</li>
-          <li class="list_item">鞋包</li>
-          <li class="list_item">居家</li>
+          <li class="list_item" v-for="(item,index) in data.nav" :key="index">{{item}}</li>
         </ul>
       </div>
     </header>
@@ -32,17 +17,8 @@
         <!--轮播图部分-->
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./image/banner1.jpg"/>
-            </div>
-            <div class="swiper-slide">
-              <img src="./image/banner2.jpg"/>
-            </div>
-            <div class="swiper-slide">
-              <img src="./image/banner3.jpg"/>
-            </div>
-            <div class="swiper-slide">
-              <img src="./image/banner4.jpg"/>
+            <div class="swiper-slide" v-for="(item,index) in data.banner" :key="index">
+              <img :src="item" alt=""/>
             </div>
           </div>
           <!-- 如果需要分页器 -->
@@ -50,237 +26,64 @@
         </div>
         <div class="m-indexServicePolicy">
           <ul class="g-grow">
-            <li class="item"><i></i>网易自营品牌</li>
-            <li class="item"><i></i>30天无理由退货</li>
-            <li class="item"><i></i>48小时快速退款</li>
+            <li class="item" v-for="(item,index) in data.active" :key="index"><i></i>{{item}}</li>
           </ul>
         </div>
         <!--详情页1-->
         <div class="m-indexFloor">
-          <div class="hd">品牌制造商直供<i></i></div>
+          <div class="hd" v-if="home.brand">{{home.brand.title}}<i></i></div>
           <div class="m-indexManufacturersSupplying">
-            <ul class="list1">
-              <li class="item1">
+
+            <ul class="list1" v-if="home.brand">
+              <li class="item1"  v-for="(item,index) in home.brand.goods" :key="index">
                 <div class="cnt">
-                  <h4>CK制造商</h4>
+                  <h4>{{item.make}}</h4>
                   <div class="data-reactid">
-                    <span>25</span>
+                    <span>{{item.price}}</span>
                     <span>元起</span>
                   </div>
                   <i class="u-icon"></i>
                 </div>
-                <img src="http://yanxuan.nosdn.127.net/e57c3fb16c4633c292d8c0e7cb053a6f.png?imageView&thumbnail=355x0&quality=65" alt=""></li>
-              <li class="item1">
-                <div class="cnt">
-                  <h4>CK制造商</h4>
-                  <div class="data-reactid">
-                    <span>25</span>
-                    <span>元起</span>
-                  </div>
-                  <i class="u-icon"></i>
-                </div>
-                <img src="http://yanxuan.nosdn.127.net/cc056d931b009298769d65b94175d696.png?imageView&thumbnail=355x0&quality=65" alt=""></li>
-              <li class="item1">
-                <div class="cnt">
-                  <h4>CK制造商</h4>
-                  <div class="data-reactid">
-                    <span>25</span>
-                    <span>元起</span>
-                  </div>
-                  <i class="u-icon"></i>
-                </div>
-                <img src="http://yanxuan.nosdn.127.net/5e2f6d68ca4cf25b18d6573eafa2a4d4.png?imageView&thumbnail=355x0&quality=65" alt=""></li>
-              <li class="item1">
-                <div class="cnt">
-                  <h4>CK制造商</h4>
-                  <div class="data-reactid">
-                    <span>25</span>
-                    <span>元起</span>
-                  </div>
-                  <i class="u-icon"></i>
-                </div>
-                <img src="http://yanxuan.nosdn.127.net/7f55f337f98a198ac3d629847171d5d2.png?imageView&thumbnail=355x0&quality=65" alt=""></li>
+                <img :src="item.imgUrl" alt=""></li>
             </ul>
           </div>
         </div>
-        <!--详情页2-->
-        <div class="m-indexFloor m-popularItemList">
-          <div class="hd">
-            <a href="#">
-              <span>新品首发</span>
-              <span class="all">查看全部></span>
+        <!--详情页2和3-->
+        <div class="m-indexFloor m-popularItemList" v-for="(items,index) in home.news" :key="index">
+          <div class="hd" :style="{backgroundImage: `url(${items.bgdImg})`}">
+            <a href="#" :class="{myColor1:+items.id===1,myColor2:+items.id===2}">
+              <span>{{items.title}}</span>
+              <span class="all">查看全部 ></span>
             </a>
           </div>
-          <div class="m-goodGrid">
-            <div class="inner inner1">
+          <div class="m-goodGrid" v-if="items.list">
+            <div class="inner inner1" :class="{inner1:+items.id===1,inner2:+items.id===2}">
               <ul class="list2">
-                <li class="item2">
-                    <img src="http://yanxuan.nosdn.127.net/1c62af3f665ec8a7b9c9723cf1fe3320.png?imageView&quality=65&thumbnail=330x330" alt="">
-                    <span class="item2-span">情定七夕 · 红玫瑰</span>
-                    <span class="item2-span">玫瑰诉情，爱意难休</span>
-                    <span class="item2-span"><span>￥88</span></span>
-                </li>
-                <li class="item2">
-                  <img src="http://yanxuan.nosdn.127.net/1c62af3f665ec8a7b9c9723cf1fe3320.png?imageView&quality=65&thumbnail=330x330" alt="">
-                  <span class="item2-span">情定七夕 · 红玫瑰</span>
-                  <span class="item2-span">玫瑰诉情，爱意难休</span>
-                  <span class="item2-span"><span>￥88</span></span>
-                </li>
-                <li class="item2">
-                  <img src="http://yanxuan.nosdn.127.net/1c62af3f665ec8a7b9c9723cf1fe3320.png?imageView&quality=65&thumbnail=330x330" alt="">
-                  <span class="item2-span">情定七夕 · 红玫瑰</span>
-                  <span class="item2-span">玫瑰诉情，爱意难休</span>
-                  <span class="item2-span"><span>￥88</span></span>
-                </li>
-                <li class="item2">
-                  <img src="http://yanxuan.nosdn.127.net/1c62af3f665ec8a7b9c9723cf1fe3320.png?imageView&quality=65&thumbnail=330x330" alt="">
-                  <span class="item2-span">情定七夕 · 红玫瑰</span>
-                  <span class="item2-span">玫瑰诉情，爱意难休</span>
-                  <span class="item2-span"><span>￥88</span></span>
-                </li>
-                <li class="item2">
-                  <img src="http://yanxuan.nosdn.127.net/1c62af3f665ec8a7b9c9723cf1fe3320.png?imageView&quality=65&thumbnail=330x330" alt="">
-                  <span class="item2-span">情定七夕 · 红玫瑰</span>
-                  <span class="item2-span">玫瑰诉情，爱意难休</span>
-                  <span class="item2-span"><span>￥88</span></span>
-                </li>
-                <li class="item2">
-                  <img src="http://yanxuan.nosdn.127.net/1c62af3f665ec8a7b9c9723cf1fe3320.png?imageView&quality=65&thumbnail=330x330" alt="">
-                  <span class="item2-span">情定七夕 · 红玫瑰</span>
-                  <span class="item2-span">玫瑰诉情，爱意难休</span>
-                  <span class="item2-span"><span>￥88</span></span>
-                </li>
-                <li class="item2">
-                  <img src="http://yanxuan.nosdn.127.net/1c62af3f665ec8a7b9c9723cf1fe3320.png?imageView&quality=65&thumbnail=330x330" alt="">
-                  <span class="item2-span">情定七夕 · 红玫瑰</span>
-                  <span class="item2-span">玫瑰诉情，爱意难休</span>
-                  <span class="item2-span"><span>￥88</span></span>
-                </li>
-                <li class="item2">
-                  <img src="http://yanxuan.nosdn.127.net/1c62af3f665ec8a7b9c9723cf1fe3320.png?imageView&quality=65&thumbnail=330x330" alt="">
-                  <span class="item2-span">情定七夕 · 红玫瑰</span>
-                  <span class="item2-span">玫瑰诉情，爱意难休</span>
-                  <span class="item2-span"><span>￥88</span></span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!--详情页3-->
-        <div class="m-indexFloor m-popularItemList">
-          <div class="hd" style="background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/bitmap2-d626e0b52a.png)">
-            <a href="#">
-              <span>人气推荐 · 好物精选</span>
-              <span class="all">查看全部></span>
-            </a>
-          </div>
-          <div class="m-goodGrid">
-            <div class="inner inner2">
-              <ul class="list2">
-                <li class="item2">
-                  <img src="http://yanxuan.nosdn.127.net/1c62af3f665ec8a7b9c9723cf1fe3320.png?imageView&quality=65&thumbnail=330x330" alt="">
-                  <span class="item2-span">情定七夕 · 红玫瑰</span>
-                  <span class="item2-span">玫瑰诉情，爱意难休</span>
-                  <span class="item2-span"><span>￥88</span></span>
-                </li>
-                <li class="item2">
-                  <img src="http://yanxuan.nosdn.127.net/1c62af3f665ec8a7b9c9723cf1fe3320.png?imageView&quality=65&thumbnail=330x330" alt="">
-                  <span class="item2-span">情定七夕 · 红玫瑰</span>
-                  <span class="item2-span">玫瑰诉情，爱意难休</span>
-                  <span class="item2-span"><span>￥88</span></span>
-                </li>
-                <li class="item2">
-                  <img src="http://yanxuan.nosdn.127.net/1c62af3f665ec8a7b9c9723cf1fe3320.png?imageView&quality=65&thumbnail=330x330" alt="">
-                  <span class="item2-span">情定七夕 · 红玫瑰</span>
-                  <span class="item2-span">玫瑰诉情，爱意难休</span>
-                  <span class="item2-span"><span>￥88</span></span>
-                </li>
-                <li class="item2">
-                  <img src="http://yanxuan.nosdn.127.net/1c62af3f665ec8a7b9c9723cf1fe3320.png?imageView&quality=65&thumbnail=330x330" alt="">
-                  <span class="item2-span">情定七夕 · 红玫瑰</span>
-                  <span class="item2-span">玫瑰诉情，爱意难休</span>
-                  <span class="item2-span"><span>￥88</span></span>
-                </li>
-                <li class="item2">
-                  <img src="http://yanxuan.nosdn.127.net/1c62af3f665ec8a7b9c9723cf1fe3320.png?imageView&quality=65&thumbnail=330x330" alt="">
-                  <span class="item2-span">情定七夕 · 红玫瑰</span>
-                  <span class="item2-span">玫瑰诉情，爱意难休</span>
-                  <span class="item2-span"><span>￥88</span></span>
-                </li>
-                <li class="item2">
-                  <img src="http://yanxuan.nosdn.127.net/1c62af3f665ec8a7b9c9723cf1fe3320.png?imageView&quality=65&thumbnail=330x330" alt="">
-                  <span class="item2-span">情定七夕 · 红玫瑰</span>
-                  <span class="item2-span">玫瑰诉情，爱意难休</span>
-                  <span class="item2-span"><span>￥88</span></span>
-                </li>
-                <li class="item2">
-                  <img src="http://yanxuan.nosdn.127.net/1c62af3f665ec8a7b9c9723cf1fe3320.png?imageView&quality=65&thumbnail=330x330" alt="">
-                  <span class="item2-span">情定七夕 · 红玫瑰</span>
-                  <span class="item2-span">玫瑰诉情，爱意难休</span>
-                  <span class="item2-span"><span>￥88</span></span>
-                </li>
-                <li class="item2">
-                  <img src="http://yanxuan.nosdn.127.net/1c62af3f665ec8a7b9c9723cf1fe3320.png?imageView&quality=65&thumbnail=330x330" alt="">
-                  <span class="item2-span">情定七夕 · 红玫瑰</span>
-                  <span class="item2-span">玫瑰诉情，爱意难休</span>
-                  <span class="item2-span"><span>￥88</span></span>
+                <li class="item2" v-for="(item,index) in items.list" :key="index">
+                    <img :src="item.imgUrl" alt="">
+                    <span class="item2-span">{{item.feature}}</span>
+                    <span class="item2-span">{{item.meaning}}</span>
+                    <span class="item2-span"><span>￥{{item.price}}</span></span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
         <!--详情页4-->
-        <div class="m-indexFloor m-buy">
-          <h3>居家好物</h3>
-          <ul class="m-buy-list">
-            <li class="m-buy-item">
-              <img src="http://yanxuan.nosdn.127.net/05ecfb1f8beff52a1aa4e48b21dda530.png?imageView&quality=65&thumbnail=330x330" alt="">
-              <div class="m-buy-chance">硬度偏好者适用</div>
+        <div class="m-indexFloor m-buy" v-for="(items,index) in home.human" :key="index">
+          <h3>{{items.title}}</h3>
+          <ul class="m-buy-list" v-if="items.goods">
+            <li class="m-buy-item" v-for="(item,index) in items.goods" :key="index">
+              <img :src="item.imgUrl" alt="sd">
+              <div class="m-buy-chance">{{item.describe}}</div>
               <div class="m-buy-m">
-                <span class="m1">居家特惠</span>
-                <span class="m2">冬夏两用你懂得哈哈哈哈</span>
-                <span class="m3"><span>￥1999</span></span>
-              </div>
-            </li>
-            <li class="m-buy-item">
-              <img src="http://yanxuan.nosdn.127.net/05ecfb1f8beff52a1aa4e48b21dda530.png?imageView&quality=65&thumbnail=330x330" alt="">
-              <div class="m-buy-chance">硬度偏好者适用</div>
-              <div class="m-buy-m">
-                <span class="m1">居家特惠</span>
-                <span class="m2">冬夏两用你懂得哈哈哈哈</span>
-                <span class="m3"><span>￥1999</span></span>
-              </div>
-            </li>
-            <li class="m-buy-item">
-              <img src="http://yanxuan.nosdn.127.net/05ecfb1f8beff52a1aa4e48b21dda530.png?imageView&quality=65&thumbnail=330x330" alt="">
-              <div class="m-buy-chance">硬度偏好者适用</div>
-              <div class="m-buy-m">
-                <span class="m1">居家特惠</span>
-                <span class="m2">冬夏两用你懂得哈哈哈哈</span>
-                <span class="m3"><span>￥1999</span></span>
-              </div>
-            </li>
-            <li class="m-buy-item">
-              <img src="http://yanxuan.nosdn.127.net/05ecfb1f8beff52a1aa4e48b21dda530.png?imageView&quality=65&thumbnail=330x330" alt="">
-              <div class="m-buy-chance">硬度偏好者适用</div>
-              <div class="m-buy-m">
-                <span class="m1">居家特惠</span>
-                <span class="m2">冬夏两用你懂得哈哈哈哈</span>
-                <span class="m3"><span>￥1999</span></span>
-              </div>
-            </li>
-            <li class="m-buy-item">
-              <img src="http://yanxuan.nosdn.127.net/05ecfb1f8beff52a1aa4e48b21dda530.png?imageView&quality=65&thumbnail=330x330" alt="">
-              <div class="m-buy-chance">硬度偏好者适用</div>
-              <div class="m-buy-m">
-                <span class="m1">居家特惠</span>
-                <span class="m2">冬夏两用你懂得哈哈哈哈</span>
-                <span class="m3"><span>￥1999</span></span>
+                <span class="m2">{{item.usefor}}</span>
+                <span class="m3"><span>￥{{item.price}}</span></span>
               </div>
             </li>
             <li class="m-buy-item">
               <div class="m-buy-text">
-                <span>更多</span><span>居家好物</span>
+                <span>更多</span><span>{{items.title}}</span>
                 <i></i>
               </div>
             </li>
@@ -288,13 +91,13 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
 <script>
   import BScroll from 'better-scroll'
   import Swiper from 'swiper'
   import 'swiper/dist/css/swiper.min.css'
+  import {mapState} from 'vuex'
   export default {
     methods:{
       _initSwiper(){
@@ -306,8 +109,8 @@
           },
         })
       },
-      _initScroll(){
-        new BScroll('.scroll',{
+      _initScrollOne(){
+        new BScroll('.inner1',{
           click: true,
           scrollX: true
         })
@@ -315,20 +118,36 @@
           click: true,
           scrollX: true
         })
-        new BScroll('.inner1',{
+      },
+      _initScroll(){
+        new BScroll('.scroll',{
           click: true,
           scrollX: true
-        })
-        new BScroll('.homeContainer',{
-          click: true,
         })
       }
     },
     mounted(){
-      this.$nextTick(()=>{
-        this._initScroll();
-        this._initSwiper();
+      this.$store.dispatch('getData',()=>{
+        this.$nextTick(()=>{
+          this._initScroll();
+        })
       })
+      this.$store.dispatch('getHome',()=>{
+        this.$nextTick(()=>{
+          this._initScrollOne()
+        })
+      })
+    },
+    computed:{
+      ...mapState(['data','home'])
+    },
+    watch:{
+      data(){
+        this.$nextTick(()=>{
+          this._initSwiper();
+        })
+      },
+      home(){}
     }
   }
 </script>
@@ -337,7 +156,7 @@
   body,html{
     background-color: #f4f4f4;
     overflow:hidden;
-    overflow-y:auto
+    overflow-y: auto;
   }
   .m-indexHd{
     position: relative;
@@ -470,7 +289,6 @@
     background-size: 0.42rem 0.42rem;
     width: 0.42rem;
     height: 0.42rem;
-    background-image: url("./image/left.png");
     line-height: 0.72rem;
     position: relative;
     top: 0.1rem;
@@ -481,6 +299,7 @@
     display: inline-block;
     position: relative;
     margin-bottom: .10667rem;
+    margin-left: 0.08rem;
     width: 47%;
     height: 3.14667rem;
     background-color: #f4f4f4;
@@ -521,7 +340,7 @@
   }
   .m-popularItemList a{
     display: block;
-    width: 3.24rem;
+    width: 100%;
     height: 1.8rem;
     position: absolute;
     top: 0;
@@ -531,21 +350,20 @@
     margin: auto;
     text-align: center;
     line-height: 1.5rem;
-    color: #999;
   }
   .m-popularItemList a>span{
     display: block;
-    font-size: 0.38rem;
+    font-size: 0.32rem;
   }
   .m-popularItemList a .all{
     display: inline-block;
     text-align: center;
-    height: 0.4rem;
+    height: 0.5rem;
     width: 2rem;
     position: absolute;
-    top: 1.2rem;
-    left:0.6rem;
-    line-height: 0.4rem;
+    top: 1.1rem;
+    left: 2.76rem;
+    line-height: 0.5rem;
     font-size: 0.24rem;
     background-color: bisque;
   }
@@ -560,6 +378,8 @@
     height: 4.6rem;
   }
   .item2{
+    display: flex;
+    flex-direction: column;
     width: 2.8rem;
     height: 100%;
     margin-left: 0.2rem;
@@ -568,13 +388,20 @@
     background: #f4f4f4;
   }
   .item2-span{
-    font-size: 0.18rem;
+    font-size: 0.3rem;
     text-align: left;
+    color: #333;
     padding: .1rem;
     display: block;
-    height: 0.31rem;
-    line-height: 0.31rem;
-    margin-bottom: 0.1rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+  }
+  .item2>span:nth-child(3){
+    font-size: 0.14rem;
+    color: #999;
   }
   .item2-span span{
     list-style: none;
@@ -582,6 +409,7 @@
   }
   .m-buy{
     height: 18.5rem;
+
   }
   .m-buy-list{
 
@@ -600,10 +428,7 @@
   .m-buy-m{
     margin-top: -0.2rem;
   }
-  .m-buy-m .m1{
-    font-size: 0.22rem;
-  }
-  .m1,.m2,.m3{
+  .m2,.m3{
     font-size: 0.28rem;
     padding: .1rem;
     white-space: nowrap;
@@ -625,6 +450,10 @@
     text-align: left;
     padding: 0.1rem;
     margin: -0.85rem 0 0 0;
+    color: #9F8A60;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
   }
   .m-buy-m{
     position: relative;
@@ -654,6 +483,12 @@
     background-image: url("//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/goodGridMore-233aaf669a.png");
     background-repeat: no-repeat;
     background-size: 0.6rem 0.6rem;
+  }
+  .myColor1{
+    color: #8BA0B6;
+  }
+  .myColor2{
+    color: #B4A078;
   }
 </style>
 
