@@ -1,6 +1,8 @@
 import {
   DATA,
-  HOME
+  HOME,
+  KNOW,
+  MARK
 } from './mutation-types'
 
 export default {
@@ -9,5 +11,11 @@ export default {
   },
   [HOME](state,{home}){
     state.home = home;
-  }
+  },
+  [KNOW](state,{know}){
+    state.know= know;
+  },
+  [MARK](state,{mark}){
+    state.mark= mark;
+  },
 }

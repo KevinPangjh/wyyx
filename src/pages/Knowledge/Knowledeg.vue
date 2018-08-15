@@ -18,122 +18,62 @@
     <!--轮播图-->
     <div class="swiper-container banner" >
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="//yanxuan.nosdn.127.net/bd1ac1ebcbdc1ed1c5fd0ca2f1aac0d6.jpg?imageView&quality=75" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="//yanxuan.nosdn.127.net/cb652ba9c4d32cfefe421233f27c716e.jpg?imageView&quality=75" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="//yanxuan.nosdn.127.net/2e847dc5262aa3e136db2fdb0bb8ce58.jpg?imageView&quality=75" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="//yanxuan.nosdn.127.net/61e1b1d8c59a08287f20e050bd30c7c8.jpg?imageView&quality=75" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="//yanxuan.nosdn.127.net/8715ff17f5cecfeec036e3f4757da839.jpg?imageView&quality=75" alt="">
+        <div class="swiper-slide" v-for="(item,index) in know.banner" :key="index">
+          <img :src="item" alt="banner">
         </div>
       </div>
     </div>
     <!--滑动的图-->
     <div class="swiper-container case">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="imgContainer">Slide1</div>
-          <div class="imgContainerText">严选推荐</div>
-        </div>
-        <div class="swiper-slide">
-          <div class="imgContainer">Slide2</div>
-        </div>
-        <div class="swiper-slide">
-          <div class="imgContainer">Slide3</div>
-        </div>
-        <div class="swiper-slide">
-          <div class="imgContainer">Slide4</div>
-        </div>
-        <div class="swiper-slide">
-          <div class="imgContainer">Slide5</div>
-        </div>
-        <div class="swiper-slide">
-          <div class="imgContainer">Slide6</div>
-        </div>
-        <div class="swiper-slide">
-          <div class="imgContainer">Slide7</div>
-        </div>
-        <div class="swiper-slide">
-          <div class="imgContainer">Slide8</div>
-        </div>
-        <div class="swiper-slide">
-          <div class="imgContainer">Slide9</div>
-        </div>
-        <div class="swiper-slide">
-          <div class="imgContainer">Slide10</div>
-        </div>
-        <div class="swiper-slide">
-          <div class="imgContainer">Slide11</div>
-        </div>
-        <div class="swiper-slide">
-          <div class="imgContainer">Slide12</div>
-        </div>
-        <div class="swiper-slide">
-          <div class="imgContainer">Slide13</div>
+        <div class="swiper-slide" v-for="(items,index) in know.navList" :key="index">
+          <div class="imgContainer" :style="{backgroundImage:`url(${items.imgUrl})`}">{{items.count}}</div>
+          <div class="imgContainerText">{{items.title}}</div>
         </div>
       </div>
     </div>
     <!--第一个商品详情-->
-    <div class="container">
-      <div class="module-title">为你推荐</div>
-      <a href="javascript:;" class="m-mainPosItem">
-        <div class="imgContainer" style="background-image: url(//yanxuan.nosdn.127.net/9c16d0d118f00d9db00fa6414aea0487.jpg?imageView&quality=75)">
-          <div class="m-exploreTag">严选推荐</div>
-        </div>
-        <div class="line1">
-          <div class="title">严选恋爱博物馆</div>
-          <div class="price"><span>9.9</span><span>元起</span></div>
-        </div>
-        <div class="line2">
-          <div class="subTitle">40款恋爱小甜饼高甜来袭！</div>
-        </div>
-      </a>
-      <a href="javascript:;" class="m-minorPosItem">
-        <div class="left">
-          <div class="author-container">
-            <img src="//yanxuan.nosdn.127.net/275bdc66f4d3f841c8879933f2593a27.png?imageView&quality=75&thumbnail=48y48" alt="author" class="author">&nbsp;&nbsp;食肉组.肉肉
-          </div>
-          <div class="line1">半价吃到鲜爽小龙虾</div>
-          <div class="line2">7、8月的小龙虾肥美正当时，各个肉质饱满，细腻弹牙，吃起来一个接一个的，根本停不住。作为从不标题党的严选挑款师，我这次给大家带来了一个超大惊喜——8月20号之前，买一盒小龙虾只要加上9.9元，就能再得一盒，只要差不多一半的价格就能把2大盒小龙虾带回家。</div>
-        </div>
-        <div class="right" style="background-image:url(//yanxuan.nosdn.127.net/64360c9a450908a76411b5db9eb1efd9.jpg?imageView&quality=75)">
-          <div class="topicTag">挑款师推荐</div>
-        </div>
-      </a>
-      <a href="javascript:;" class="m-minorPosItem">
-        <div class="left">
-          <div class="author-container">
-            <img src="//yanxuan.nosdn.127.net/275bdc66f4d3f841c8879933f2593a27.png?imageView&quality=75&thumbnail=48y48" alt="author" class="author">&nbsp;&nbsp;食肉组.肉肉
-          </div>
-          <div class="line1">半价吃到鲜爽小龙虾</div>
-          <div class="line2">7、8月的小龙虾肥美正当时，各个肉质饱满，细腻弹牙，吃起来一个接一个的，根本停不住。作为从不标题党的严选挑款师，我这次给大家带来了一个超大惊喜——8月20号之前，买一盒小龙虾只要加上9.9元，就能再得一盒，只要差不多一半的价格就能把2大盒小龙虾带回家。</div>
-        </div>
-        <div class="right" style="background-image:url(//yanxuan.nosdn.127.net/64360c9a450908a76411b5db9eb1efd9.jpg?imageView&quality=75)">
-          <div class="topicTag">挑款师推荐</div>
-        </div>
-      </a>
+    <div class="container" v-if="know.like">
+      <div class="module-title">{{know.like.title}}</div>
+      <!--头部的banner-->
+     <div  v-if="items.hearder" v-for="(items,index) in know.like.choose" :key="index">
+       <a href="javascript:;" class="m-mainPosItem" >
+         <div class="imgContainer" :style="{backgroundImage: `url(${items.hearder.imgUrl})`}">
+           <div class="m-exploreTag">{{items.hearder.recommend}}</div>
+         </div>
+         <div class="line1">
+           <div class="title">{{items.hearder.home}}</div>
+           <div class="price"><span>{{items.hearder.price}}</span><span>元起</span></div>
+         </div>
+         <div class="line2">
+           <div class="subTitle">{{items.hearder.active}}</div>
+         </div>
+       </a>
+       <!--下面的详情-->
+       <a href="javascript:;" class="m-minorPosItem" v-for="(item,index) in items.goodsLists" :key="index">
+         <div class="left">
+           <div class="author-container">
+             <img :src="item.averta" alt="author" class="author">&nbsp;&nbsp;{{item.name}}
+           </div>
+           <div class="line1">{{item.line1}}</div>
+           <div class="line2">{{item.line2}}</div>
+         </div>
+         <div class="right" :style="{backgroundImage:`url(${item.imgUrl})`}">
+           <div class="topicTag">{{item.perv}}</div>
+         </div>
+       </a>
+     </div>
     </div>
     <!--十点一刻-->
-    <div class="m-exploreTenFifteen">
-      <div class="module-title">十点一刻</div>
+    <div class="m-exploreTenFifteen" v-if="know.fifex">
+      <div class="module-title">{{know.fifex.title}}</div>
       <a href="javascript:;" class="m-mainPosItem">
         <div class="swiper-container fifteen">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img class="imgContainer" src="//yanxuan.nosdn.127.net/9c16d0d118f00d9db00fa6414aea0487.jpg?imageView&quality=75">
+            <div class="swiper-slide" v-for="(item,index) in know.fifex.talk" :key="index">
+              <img class="imgContainer" :src="item">
             </div>
-            <div class="swiper-slide">
-              <img class="imgContainer" src="//yanxuan.nosdn.127.net/9c16d0d118f00d9db00fa6414aea0487.jpg?imageView&quality=75">
-
-            </div>
-           </div>
+          </div>
         </div>
       </a>
     </div>
@@ -142,6 +82,7 @@
 <script>
   import Swiper from 'swiper'
   import 'swiper/dist/css/swiper.min.css'
+  import {mapState} from 'vuex'
   export default {
     methods:{
       _initSwiper(){
@@ -168,7 +109,14 @@
       }
     },
     mounted(){
-      this._initSwiper()
+      this.$store.dispatch("getKnow",()=>{
+        this.$nextTick(()=>{
+          this._initSwiper()
+        })
+      })
+    },
+    computed:{
+      ...mapState(["know"])
     }
   }
 </script>
@@ -184,14 +132,19 @@
     .j-bd {
       width:100%;
       margin-bottom: 1rem;
+      /*头部样式*/
       .containerBox{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
         width: 100%;
+        height: 0.9rem;
         background-color: #ffffff;
-        padding: 0.12rem;
+        padding: 0.2rem 0.12rem;
         .hdWraper{
           .search{
             width: 7.16rem;
-            height: 0.9rem;
             background-color: #fafafa;
             .bd{
               display: flex;
@@ -204,6 +157,7 @@
               .u-icon-home{
                 width: .64rem;
                 height: .58667rem;
+                margin-left: 0.2rem;
                 background-image: url("./images/11.png");
                 background-position: 0 -0.75rem;
                 background-size: 1.8rem;
@@ -257,6 +211,10 @@
           }
         }
       }
+      .banner{
+        margin-top: 1.0rem;
+      }
+      /*轮播图*/
       .swiper-container {
           width: 100%;
           height: 100%;
@@ -282,6 +240,7 @@
             }
           }
         }
+      /*第二个轮播图*/
       .case{
           margin: 0.5rem 0 0.2rem 0;
           background-color: #ffffff;
@@ -292,11 +251,11 @@
               height: 2.3rem;
               position: relative;
               .imgContainer{
+                color: #999999;
                 text-align: right;
                 font-size: 0.32rem;
                 width: 100%;
                 height: 100%;
-                background-image:url(//yanxuan.nosdn.127.net/32fb54dda7de5c4a80b4d45d370e045e.png?imageView&quality=75);
                 background-size:3.28rem 1.64rem ;
                 background-position:top;
                 background-repeat:no-repeat;
@@ -313,6 +272,7 @@
             }
           }
         }
+      /*第一个商品详情*/
       .container{
         background-color: #ffffff;
         display: flex;
@@ -423,8 +383,8 @@
           .right{
             position: relative;
             margin-right: 0;
-            width: 2.8rem;
-            height: 2.72rem;
+            width: 2.85rem;
+            height: 2.69rem;
             background-size:cover;
             background-position:center;
             background-repeat:no-repeat;
@@ -445,6 +405,7 @@
           }
         }
       }
+      /*十点*/
       .m-exploreTenFifteen{
         background-color: #ffffff;
         display: flex;

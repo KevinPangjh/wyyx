@@ -1,0 +1,119 @@
+{
+  "banner":[
+    "//yanxuan.nosdn.127.net/bd1ac1ebcbdc1ed1c5fd0ca2f1aac0d6.jpg?imageView&quality=75",
+    "//yanxuan.nosdn.127.net/cb652ba9c4d32cfefe421233f27c716e.jpg?imageView&quality=75",
+    "//yanxuan.nosdn.127.net/2e847dc5262aa3e136db2fdb0bb8ce58.jpg?imageView&quality=75",
+    "//yanxuan.nosdn.127.net/61e1b1d8c59a08287f20e050bd30c7c8.jpg?imageView&quality=75",
+    "//yanxuan.nosdn.127.net/8715ff17f5cecfeec036e3f4757da839.jpg?imageView&quality=75",
+    "//yanxuan.nosdn.127.net/cb652ba9c4d32cfefe421233f27c716e.jpg?imageView&quality=75"
+  ],
+  "navList":[
+    {
+      "count":"123",
+      "imgUrl":"//yanxuan.nosdn.127.net/32fb54dda7de5c4a80b4d45d370e045e.png?imageView&quality=75",
+      "title":"严选推荐"
+    },
+    {
+      "count":"452",
+      "imgUrl":"//yanxuan.nosdn.127.net/373cacad1befe30d2d602d0b797e8017.png?imageView&quality=75",
+      "title":"严选HOME"
+    },
+    {
+      "count":"12",
+      "imgUrl":"//yanxuan.nosdn.127.net/32fb54dda7de5c4a80b4d45d370e045e.png?imageView&quality=75",
+      "title":"严选推荐"
+    },
+    {
+      "count":"58",
+      "imgUrl":"//yanxuan.nosdn.127.net/1662ac1fabbc2e495bdda39357a93d65.png?imageView&quality=75",
+      "title":"挑款师推荐"
+    },
+    {
+      "count":"4512",
+      "imgUrl":"//yanxuan.nosdn.127.net/2642ad9119d817d974134e0ace613239.png?imageView&quality=75",
+      "title":"新品放映室"
+    },
+    {
+      "count":"128",
+      "imgUrl":"//yanxuan.nosdn.127.net/cbcc9dcba30d4f8448a4412db4d9122f.png?imageView&quality=75",
+      "title":"丁磊推荐"
+    },
+    {
+      "count":"123",
+      "imgUrl":"//yanxuan.nosdn.127.net/32fb54dda7de5c4a80b4d45d370e045e.png?imageView&quality=75",
+      "title":"严选推荐"
+    },
+    {
+      "count":"452",
+      "imgUrl":"//yanxuan.nosdn.127.net/373cacad1befe30d2d602d0b797e8017.png?imageView&quality=75",
+      "title":"严选HOME"
+    }
+  ],
+  "like":{
+      "title": "为你推荐",
+      "choose": [
+        {
+          "hearder": {
+            "imgUrl": "//yanxuan.nosdn.127.net/9c16d0d118f00d9db00fa6414aea0487.jpg?imageView&quality=75",
+            "recommend": "严选推荐",
+            "home": "严选恋爱博物馆",
+            "price": "9.9",
+            "active": "40款恋爱小甜饼高甜来袭！"
+          },
+          "goodsLists": [
+            {
+              "averta": "//yanxuan.nosdn.127.net/275bdc66f4d3f841c8879933f2593a27.png?imageView&quality=75&thumbnail=48y48",
+              "name": "食肉组.肉肉",
+              "line1": "半价吃到鲜爽小龙虾",
+              "line2": "7、8月的小龙虾肥美正当时，各个肉质饱满，细腻弹牙，吃起来一个接一个的，根本停不住。作为从不标题党的严选挑款师，我这次给大家带来了一个超大惊喜——8月20号之前，买一盒小龙虾只要加上9.9元，就能再得一盒，只要差不多一半的价格就能把2大盒小龙虾带回家",
+              "imgUrl": "//yanxuan.nosdn.127.net/64360c9a450908a76411b5db9eb1efd9.jpg?imageView&quality=75",
+              "perv": "挑款师推荐"
+            },
+            {
+              "averta": "//yanxuan.nosdn.127.net/26303aef5f0c38db2862d7ba1f6b5016.png?imageView&quality=75&thumbnail=48y48",
+              "name": "服装组：内内",
+              "line1": "内衣决定夏日的舒适",
+              "line2": "夏日的舒适，是内衣给的。在闷热的天气里走回家，女孩子的第一件事就是脱下内衣，男孩子也会换上宽松舒适的家居短裤，这才能将自己从紧绷难受的状态中解救出来。所以我在开发内衣的时候，觉得严选的内衣一定得是舒适好穿的，而且不同的人在这都能找到适合她们的内衣。我开发了不同材质和不同设计的多种内衣裤，希望其中能有一款符合你对好内衣的想象。",
+              "imgUrl": "//yanxuan.nosdn.127.net/91857e34bc245c37899e6c0322853731.jpg?imageView&quality=75",
+              "perv": "挑款师推荐"
+            }
+          ]
+        },
+        {
+          "hearder": {
+            "imgUrl": "//yanxuan.nosdn.127.net/852d2d2b9ef94307865890a7403e121c.jpg?imageView&quality=75",
+            "recommend": "严选推荐",
+            "home": "8月服饰鞋包上新",
+            "price": "39",
+            "active": "新品穿搭画册"
+          },
+          "goodsLists": [
+            {
+              "averta": "//yanxuan.nosdn.127.net/e433d4785703908e5a33028ece2e9e58.png?imageView&quality=75&thumbnail=48y48",
+              "name": "丁磊",
+              "line1": "立秋贴秋膘，广式汤料包",
+              "line2": "广式汤料包限时19.9元2份",
+              "imgUrl": "//yanxuan.nosdn.127.net/c001cd0404b0d919dfc2a63b79fa8816.jpg?imageView&quality=75",
+              "perv": "丁磊的好货推荐"
+            },
+            {
+              "averta": "//yanxuan.nosdn.127.net/e433d4785703908e5a33028ece2e9e58.png?imageView&quality=75&thumbnail=48y48",
+              "name": "丁磊",
+              "line1": "今年七夕送什么？",
+              "line2": "七夕女生零食礼盒，限量98元",
+              "imgUrl": "//yanxuan.nosdn.127.net/ab35bcd18efd1a042d08dfe3d2438ea9.jpg?imageView&quality=75",
+              "perv": "丁磊的好货推荐"
+            }
+          ]
+        }
+      ]
+    },
+  "fifex":{
+    "title":"十点一刻",
+    "talk":[
+      "//yanxuan.nosdn.127.net/9c16d0d118f00d9db00fa6414aea0487.jpg?imageView&quality=75",
+      "//yanxuan.nosdn.127.net/2e847dc5262aa3e136db2fdb0bb8ce58.jpg?imageView&quality=75"
+    ]
+  }
+
+}

@@ -49,26 +49,28 @@
           </div>
         </div>
         <!--详情页2和3-->
-        <div class="m-indexFloor m-popularItemList" v-for="(items,index) in home.news" :key="index">
-          <div class="hd" :style="{backgroundImage: `url(${items.bgdImg})`}">
-            <a href="#" :class="{myColor1:+items.id===1,myColor2:+items.id===2}">
-              <span>{{items.title}}</span>
-              <span class="all">查看全部 ></span>
-            </a>
-          </div>
-          <div class="m-goodGrid" v-if="items.list">
-            <div class="inner inner1" :class="{inner1:+items.id===1,inner2:+items.id===2}">
-              <ul class="list2">
-                <li class="item2" v-for="(item,index) in items.list" :key="index">
+        <span v-if="home.news">
+          <div class="m-indexFloor m-popularItemList" v-for="(items,index) in home.news" :key="index">
+            <div class="hd" :style="{backgroundImage: `url(${items.bgdImg})`}">
+              <a href="#" :class="{myColor1:+items.id===1,myColor2:+items.id===2}">
+                <span>{{items.title}}</span>
+                <span class="all">查看全部 ></span>
+              </a>
+            </div>
+            <div class="m-goodGrid" v-if="items.list">
+              <div class="inner inner1" :class="{inner1:+items.id===1,inner2:+items.id===2}">
+                <ul class="list2">
+                  <li class="item2" v-for="(item,index) in items.list" :key="index">
                     <img :src="item.imgUrl" alt="">
                     <span class="item2-span">{{item.feature}}</span>
                     <span class="item2-span">{{item.meaning}}</span>
                     <span class="item2-span"><span>￥{{item.price}}</span></span>
-                </li>
-              </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
+        </span>
         <!--详情页4-->
         <div class="m-indexFloor m-buy" v-for="(items,index) in home.human" :key="index">
           <h3>{{items.title}}</h3>

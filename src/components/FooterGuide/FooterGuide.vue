@@ -49,6 +49,7 @@
     display: flex;
     flex-direction: row;
     position: fixed;
+    z-index: 10000;
     bottom: 0;
     left: 0;
     height: 1.0rem;
